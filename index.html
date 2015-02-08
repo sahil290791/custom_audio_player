@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>HTML5 Audio Player by sahil290791</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>HTML5 Audio Player</h1>
+        <p>Custom HTML5 Audio Player</p>
+        <p class="view"><a href="https://github.com/sahil290791/custom_audio_player">View the Project on GitHub <small>sahil290791/custom_audio_player</small></a></p>
+        <ul>
+          <li><a href="https://github.com/sahil290791/custom_audio_player/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sahil290791/custom_audio_player/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sahil290791/custom_audio_player">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="html5-audio-player" class="anchor" href="#html5-audio-player" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML5 Audio Player</h3>
+
+<p>A minimal UI for the HTML5 audio player.</p>
+
+<p><img src="media/audio_player.png"></p>
+
+<p>Its light and responsive. Instead of using cover art in the player it uses different background colors everytime you refresh the page which even saves page load time.</p>
+
+<h4>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use:</h4>
+
+<p>Include the css files in the header and the js files just before the closing body tag</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- CSS Files--&gt;</span>
+    &lt;<span class="pl-ent">head</span>&gt;
+        &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>css/audio_player.css<span class="pl-pds">"</span></span>&gt;
+    &lt;/<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+    <span class="pl-c">&lt;!--AUDIO PLAYER CODE goes here --&gt;</span>
+    <span class="pl-c">&lt;!-- JS Files--&gt;</span>
+<span class="pl-s2">       &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s2">       &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s2">       &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>js/audio_player.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">body</span>&gt;</pre></div>
+
+<p>Change the source for the audio file in the audio tag on the page</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">audio</span> <span class="pl-e">controls</span> <span class="pl-e">preload</span>=<span class="pl-s1"><span class="pl-pds">"</span>auto<span class="pl-pds">"</span></span> <span class="pl-e">hidden</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>audio-file<span class="pl-pds">"</span></span> &gt;
+          &lt;<span class="pl-ent">source</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>media/water.mp3<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>audio/mpeg<span class="pl-pds">"</span></span>&gt;
+          &lt;<span class="pl-ent">source</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>media/water.ogg<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>audio/ogg<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">audio</span>&gt;</pre></div>
+
+<p>Just download the resources and include the audio player partial if you want to plug it into a rails project as: </p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">&lt;</span><span class="pl-k">%=</span>render <span class="pl-c1">:partial</span>=&gt;<span class="pl-s1"><span class="pl-pds">"</span>audio_player<span class="pl-pds">"</span></span><span class="pl-s1"><span class="pl-pds">%&gt;</span></span></pre></div>
+
+<p>Or use the code from audio_player.html file into your project</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/sahil290791">sahil290791</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-59500519-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
