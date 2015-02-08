@@ -6,7 +6,6 @@
 <p>Include the css files in the header and the js files just before the closing body tag</p>
 ```html
 <!-- CSS Files-->
-```html
 	<head>
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
