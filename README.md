@@ -1,5 +1,5 @@
 <h3>HTML5 Audio Player</h3>
-<p>A minimal UI for the HTML5 audio player.</p>
+<p>HTML5 audio player with minimalistic UI.</p>
 <img src="media/audio_player.png">
 <p>Click <a href="https://sahil290791.github.io/custom_audio_player/">here</a> for the demo.</p>
 <p>Its light and responsive. Instead of using cover art in the player it uses different background colors everytime you refresh the page which even saves page load time.</p>
