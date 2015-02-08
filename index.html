@@ -1,77 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>HTML5 Audio Player by sahil290791</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>HTML5 Audio Player by sahil290791</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+    <header>
+      <div class="inner">
         <h1>HTML5 Audio Player</h1>
-        <p>Custom HTML5 Audio Player</p>
-        <p class="view"><a href="https://github.com/sahil290791/custom_audio_player">View the Project on GitHub <small>sahil290791/custom_audio_player</small></a></p>
-        <ul>
-          <li><a href="https://github.com/sahil290791/custom_audio_player/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/sahil290791/custom_audio_player/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/sahil290791/custom_audio_player">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
+        <h2>Custom HTML5 Audio Player</h2>
+        <a href="https://github.com/sahil290791/custom_audio_player" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
 <a id="html5-audio-player" class="anchor" href="#html5-audio-player" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML5 Audio Player</h3>
 
 <p>A minimal UI for the HTML5 audio player.</p>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/audio_player.css">
-
-<!-- HIDDEN AUDIO TAG-->
-        <audio controls preload="auto" hidden id="audio-file" >
-          <source src="media/water.mp3" type="audio/mpeg">
-          <source src="media/water.ogg" type="audio/ogg">
-                Your browser does not support the audio element.
-        </audio>
-
-        <div class="container">
-            <div id="container" class="col-xs-12 col-lg-6 col-md-6 col-sm-6">
-                <div id="cover-art" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                      <div style="font-size: 57px; top: 19%;" class="text-center col-xs-12 col-md-12 col-sm-12 col-lg-12 "><i style="color: rgb(69, 97, 37);" class="fa fa-headphones fa-5x"></i></div>
-                      <div class="progress" title="..">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                      </div>
-                      <div id="timer">
-                          <p style="margin: 0px;"><span id="current_time">..</span> /<span id="duration">..</span></p>
-                      </div>
-                </div>
-                <div class="col-xs-12 col-lg-12 col-md-12" id="player">
-	                <div class="text-center col-md-4 col-sm-4 col-xs-4 col-lg-4" id = "rewind">
-	                   <i class="fa fa-backward fa-fw fa-3x" ></i>
-	                </div>
-	                <div class="text-center col-md-4 col-sm-4 col-xs-4 col-lg-4" id="play">
-	                   <i class="fa fa-play fa-fw fa-3x" ></i>
-	                </div>
-	                <div class="text-center col-md-4 col-sm-4 col-xs-4 col-lg-4" id = "forward">
-	                   <i class="fa fa-forward fa-fw fa-3x"></i>
-	                </div>
-                </div>
-            </div>
-        </div>
-        <!-- JS Files-->
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-       <script type="text/javascript" src="js/audio_player.js"></script>
+<p><img src="media/audio_player.png"></p>
 
 <p>Its light and responsive. Instead of using cover art in the player it uses different background colors everytime you refresh the page which even saves page load time.</p>
 
@@ -106,14 +68,26 @@
 <div class="highlight highlight-ruby"><pre><span class="pl-k">&lt;</span><span class="pl-k">%=</span>render <span class="pl-c1">:partial</span>=&gt;<span class="pl-s1"><span class="pl-pds">"</span>audio_player<span class="pl-pds">"</span></span><span class="pl-s1"><span class="pl-pds">%&gt;</span></span></pre></div>
 
 <p>Or use the code from audio_player.html file into your project</p>
-      </section>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/sahil290791/custom_audio_player/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/sahil290791/custom_audio_player/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/sahil290791/custom_audio_player"></a> is maintained by <a href="https://github.com/sahil290791">sahil290791</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/sahil290791">sahil290791</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
