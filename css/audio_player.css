@@ -37,7 +37,9 @@
     
 }
 #player div i {
+    font-size: 55px;
     line-height: 1.4;
+    text-shadow: none;
 }
 #player div:hover{
   background-color:#d5d5d5;
