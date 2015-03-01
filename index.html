@@ -32,25 +32,7 @@ header h1{
 padding-top: 0px; margin-top: 0px;
 }
     </style>
-        <script type="text/javascript">
-window.addEventListener("deviceorientation", function(event) {
-          var a,b,c;
-          a=event.alpha;
-          b=event.beta;
-          c=event.gamma;
-          $('#eva').html(a);
-          $('#evb').html(b);
-          $('#evc').html(c);
-      }, true);
-    window.ondevicemotion = function(event) {  
-        var accelerationX = event.accelerationIncludingGravity.x;  
-        var accelerationY = event.accelerationIncludingGravity.y;  
-        var accelerationZ = event.accelerationIncludingGravity.z;  
-        $('#ax').html(accelerationX);
-        $('#ay').html(accelerationY);
-        $('#az').html(accelerationZ);
-    }  
-    </script>
+
   </head>
 
   <body>
@@ -173,7 +155,25 @@ window.addEventListener("deviceorientation", function(event) {
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
+        <script type="text/javascript">
+window.addEventListener("deviceorientation", function(event) {
+          var a,b,c;
+          a=event.alpha;
+          b=event.beta;
+          c=event.gamma;
+          $('#eva').html(a);
+          $('#evb').html(b);
+          $('#evc').html(c);
+      }, true);
+    window.ondevicemotion = function(event) {  
+        var accelerationX = event.accelerationIncludingGravity.x;  
+        var accelerationY = event.accelerationIncludingGravity.y;  
+        var accelerationZ = event.accelerationIncludingGravity.z;  
+        $('#ax').html(accelerationX);
+        $('#ay').html(accelerationY);
+        $('#az').html(accelerationZ);
+    }  
+    </script>
       </div>
     </div>
   </body>
