@@ -38,15 +38,6 @@ padding-top: 0px; margin-top: 0px;
   <body>
     <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
       <div class="content">
-      <div id="test">
-        acc X: <p id="ax"></p>
-        acc Y: <p id="ay"></p>
-        acc Z: <p id="az"></p>
-          acc X: <p id="eva"></p>
-        acc Y: <p id="evb"></p>
-        acc Z: <p id="evc"></p>
-        <!-- acc X: <p id="ax"></p> -->
-      </div>
         <header>
           <h1>HTML5 Audio Player</h1>
           <h2>Custom HTML5 Audio Player</h2>
@@ -155,25 +146,7 @@ padding-top: 0px; margin-top: 0px;
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-        <script type="text/javascript">
-window.addEventListener("deviceorientation", function(event) {
-          var a,b,c;
-          a=event.alpha;
-          b=event.beta;
-          c=event.gamma;
-          $('#eva').html(a);
-          $('#evb').html(b);
-          $('#evc').html(c);
-      }, true);
-    window.ondevicemotion = function(event) {  
-        var accelerationX = event.accelerationIncludingGravity.x;  
-        var accelerationY = event.accelerationIncludingGravity.y;  
-        var accelerationZ = event.accelerationIncludingGravity.z;  
-        $('#ax').html(accelerationX);
-        $('#ay').html(accelerationY);
-        $('#az').html(accelerationZ);
-    }  
-    </script>
+
       </div>
     </div>
   </body>
