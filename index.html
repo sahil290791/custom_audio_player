@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="google-site-verification" content="kEjgeVhcXTRsgo6xksx-3OEOnOQPEUfyaJ_Tq4kHWGc" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>HTML5 Audio Player by sahil290791</title>
+    <style>
+    *{
+      font-family: 'Roboto', sans-serif;
+    }
+.content {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 24px;
+}
+a.button{
+  width: auto;
+}
+header{
+  margin-top: 0px; padding-top: 16px;
+}
+header h1{
+padding-top: 0px; margin-top: 0px;
+}
+    </style>
+
+  </head>
+
+  <body>
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+      <div class="content">
+        <header>
+          <h1>HTML5 Audio Player</h1>
+          <h2>Custom HTML5 Audio Player</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/sahil290791/custom_audio_player/zipball/master" id="download-zip" class="button hidden-xs"><span >Download .zip</span></a>
+          <a href="https://github.com/sahil290791/custom_audio_player/tarball/master" id="download-tar-gz" class="button hidden-xs"><span class="hidden-xs">Download .tar.gz</span></a>
+          <a href="https://github.com/sahil290791/custom_audio_player" id="view-on-github" class="button"><span >View on GitHub</span ></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+        
+
+<h4>HTML5 audio player with minimalistic UI.</h4>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/audio_player.css">
+<!-- HIDDEN AUDIO TAG-->
+        <audio controls preload="auto" hidden id="audio-file" >
+          <source src="media/water.mp3" type="audio/mpeg">
+          <source src="media/water.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+        </audio>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="margin-bottom: 20px;">
+            <div class="col-xs-12 col-md-offset-1 col-sm-offset-1 col-lg-offset-1 col-lg-10 col-md-10 col-sm-10">
+                <div id="cover-art" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div style="font-size: 57px; top: 19%;" class="text-center col-xs-12 col-md-12 col-sm-12 col-lg-12 "><i style="color: rgb(69, 97, 37);text-shadow:none;" class="fa fa-headphones fa-5x"></i></div>
+                      <div class="progress" title="..">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                      </div>
+                      <div id="timer">
+                          <p style="margin: 0px;"><span id="current_time">..</span> /<span id="duration">..</span></p>
+                      </div>
+                </div>
+                <div class="col-xs-12 col-lg-12 col-md-12" id="player">
+	                <div class="text-center col-md-4 col-sm-4 col-xs-4 col-lg-4" id = "rewind">
+	                   <i class="fa fa-backward fa-fw fa-3x" ></i>
+	                </div>
+	                <div class="text-center col-md-4 col-sm-4 col-xs-4 col-lg-4" id="play">
+	                   <i class="fa fa-play fa-fw fa-3x" ></i>
+	                </div>
+	                <div class="text-center col-md-4 col-sm-4 col-xs-4 col-lg-4" id = "forward">
+	                   <i class="fa fa-forward fa-fw fa-3x"></i>
+	                </div>
+                </div>
+            </div>
+        </div>
+        <!-- JS Files-->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+       <script type="text/javascript" src="js/audio_player.js"></script>
+
+<p>Its light and responsive. Instead of using cover art in the player it uses different background colors on each page refresh which saves page load time.</p>
+
+<h4>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use:</h4>
+
+<p>Include the css files in the header and the js files just before the closing body tag</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- CSS Files--&gt;</span>
+    &lt;<span class="pl-ent">head</span>&gt;
+        &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s1"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>css/audio_player.css<span class="pl-pds">"</span></span>&gt;
+    &lt;/<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+    <span class="pl-c">&lt;!--AUDIO PLAYER CODE goes here --&gt;</span>
+    <span class="pl-c">&lt;!-- JS Files--&gt;</span>
+<span class="pl-s2">       &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s2">       &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s2">       &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>js/audio_player.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">body</span>&gt;</pre></div>
+
+<p>Change the source for the audio file in the audio tag on the page</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">audio</span> <span class="pl-e">controls</span> <span class="pl-e">preload</span>=<span class="pl-s1"><span class="pl-pds">"</span>auto<span class="pl-pds">"</span></span> <span class="pl-e">hidden</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>audio-file<span class="pl-pds">"</span></span> &gt;
+          &lt;<span class="pl-ent">source</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>media/water.mp3<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>audio/mpeg<span class="pl-pds">"</span></span>&gt;
+          &lt;<span class="pl-ent">source</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>media/water.ogg<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>audio/ogg<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">audio</span>&gt;</pre></div>
+
+<p>Just download the resources and include the audio player partial if you want to plug it into a rails project as: </p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">&lt;</span><span class="pl-k">%=</span>render <span class="pl-c1">:partial</span>=&gt;<span class="pl-s1"><span class="pl-pds">"</span>audio_player<span class="pl-pds">"</span></span><span class="pl-s1"><span class="pl-pds">%&gt;</span></span></pre></div>
+
+<p>Or use the code from audio_player.html file into your project</p>
+        </section>
+
+        <footer>
+          HTML5 Audio Player is maintained by <a href="https://github.com/sahil290791">sahil290791</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-59500519-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
+</html>
