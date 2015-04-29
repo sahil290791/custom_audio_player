@@ -80,4 +80,18 @@ font-size: 57px; top: 19%;
    top: 9%;
 }
 
+.wrapper1, .col-sm-offset-1{
+    padding-left: 0;
+    padding-right: 0;
+}
+#timer{
+    font-size: 16px;
+}
+header > h1{
+    font-size: 24px;
+}
+header > h2{
+    font-size: 17px;
+    line-height: 0;
+}
 }
