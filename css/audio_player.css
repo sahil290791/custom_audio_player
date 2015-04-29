@@ -56,3 +56,26 @@
 #timer > p {
   margin: 0;
 }
+
+#cover-art > div.text-center{
+font-size: 57px; top: 19%;
+}
+
+@media (min-width: 250px) and (max-width: 519px){
+
+#player div i {
+    font-size: 31px;
+    line-height: 1.4;
+    text-shadow: none;
+}
+
+#cover-art {
+    height: 229px;
+}
+
+#cover-art > div.text-center{
+   font-size: 35px;
+   top: 9%;
+}
+
+}
